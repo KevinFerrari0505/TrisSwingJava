@@ -94,6 +94,24 @@ FinestraGioco     →  usa Partita    →  gestisce click e UI
 
 ---
 
+## 🤖 AI Assistance
+ 
+Questo progetto è stato sviluppato con il supporto di [Claude](https://claude.ai) (Anthropic).
+ 
+In particolare, Claude ha aiutato ad estendere il gioco con la possibilità di disputare più partite
+consecutive senza chiudere l'applicazione: è stato aggiunto un bottone "Nuova Partita" che si attiva
+a fine partita, resettando la griglia e mantenendo gli stessi giocatori. È stata inoltre implementata
+l'evidenziazione in verde delle celle della combinazione vincente e un'etichetta che mostra il turno
+corrente aggiornata ad ogni mossa.
+ 
+Per supportare queste funzionalità, Claude ha guidato il refactoring delle classi esistenti:
+in `Partita` sono stati introdotti il campo `vincitore`, il metodo `getVincitore()` per recuperarlo
+in modo esplicito e il metodo `reset()` per reinizializzare lo stato della partita; in `Griglia`
+è stato aggiunto il metodo `getCelleVincenti()` che restituisce le coordinate delle tre celle
+della combinazione vincente.
+
+---
+
 ## 👤 Autore
 
 Fatto da **KevinFerrari0505**
