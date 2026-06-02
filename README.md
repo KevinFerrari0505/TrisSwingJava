@@ -41,7 +41,8 @@ tris/
 
 ```bash
 # Clona il repository
-cd tris-java
+https://github.com/KevinFerrari0505/TrisSwingJava.git
+cd Tris
 
 # Compila tutti i file
 javac *.java
