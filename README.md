@@ -19,37 +19,42 @@ Un'implementazione del classico gioco del Tris con interfaccia grafica realizzat
 ## 🗂️ Struttura del progetto
 
 ```
-tris/
-├── Main.java               # Entry point
-├── FinestraIniziale.java   # Schermata inserimento nickname
-├── FinestraGioco.java      # Finestra di gioco con la griglia
-├── Partita.java            # Logica della partita (turni, stato, reset)
-├── Griglia.java            # Logica della griglia (mosse, vittoria, pareggio)
-├── Player.java             # Modello del giocatore
-└── StatoPartita.java       # Enum: IN_CORSO, VITTORIA, PAREGGIO
+TrisSwingJava/
+├── src/
+│   └── main/
+│       └── java/
+│           ├── Main.java               # Entry point
+│           ├── FinestraIniziale.java   # Schermata inserimento nickname
+│           ├── FinestraGioco.java      # Finestra di gioco con la griglia
+│           ├── Partita.java            # Logica della partita (turni, stato, reset)
+│           ├── Griglia.java            # Logica della griglia (mosse, vittoria, pareggio)
+│           ├── Player.java             # Modello del giocatore
+│           └── StatoPartita.java       # Enum: IN_CORSO, VITTORIA, PAREGGIO
+├── build.gradle.kts
+└── settings.gradle.kts
 ```
 
 ---
 
 ## 🚀 Come eseguire
 
-### Prerequisiti
-- Java JDK 8 o superiore installato
-- Verifica con: `java -version`
-
-### Compilazione ed esecuzione
-
+**Con il Gradle Wrapper (consigliato, non serve Gradle installato):**
 ```bash
-# Clona il repository
-https://github.com/KevinFerrari0505/TrisSwingJava.git
-cd Tris
-
-# Compila tutti i file
-javac *.java
-
-# Avvia il gioco
-java Main
+git clone https://github.com/KevinFerrari0505/TrisSwingJava.git
+cd TrisSwingJava
+.\gradlew build      # Windows
+./gradlew build      # Linux/macOS
+.\gradlew run        # Windows
+./gradlew run         # Linux/macOS
 ```
+
+**Con IntelliJ IDEA:**
+1. Apri la cartella `TrisSwingJava` come progetto
+2. Tasto destro su `Main.java` → **Run 'Main'**
+
+### Prerequisiti
+- JDK compatibile con la versione dichiarata in `build.gradle.kts`
+- Verifica con: `java -version`
 
 ---
 
@@ -91,6 +96,7 @@ FinestraGioco     →  usa Partita    →  gestisce click e UI
 
 - **Java** — logica di gioco
 - **Java Swing** — interfaccia grafica (`JFrame`, `JPanel`, `JButton`, `JOptionPane`)
+- **Gradle** (Kotlin DSL) — build tool
 
 ---
 
